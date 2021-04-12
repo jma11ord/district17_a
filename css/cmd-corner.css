@@ -1,0 +1,22 @@
+* { 
+    font-size: 48px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat (36vw);
+}
+
+main {
+    grid-column: 1/-1;
+    margin: 10vw 5vw 3vw;
+}
+
+section { 
+    border: 1px solid red;
+    margin: 2vw;
+    grid-column: 1 /-1;
+}
+
+

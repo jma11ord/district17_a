@@ -1,0 +1,64 @@
+.hero {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    /* 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    */
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+}
+
+.hero::before {    
+      content: "";
+      background-image: url("./opaque.jpg");
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.2;
+}
+header {
+    grid-column: 4 / 9;
+    border: 2px solid blue;
+    /* position: absolute; */
+    top: 0;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.subhead {
+    display: flex;
+    align-items: stretch;
+    margin-top: 50px;
+}
+h1 {
+text-align: center;
+margin-bottom: 0;
+}
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    margin: 30px 10px;
+}
+img {
+    margin: 20px;
+}
+
+.med { font-size: 2rem;}
+.large { font-size: 4rem;}
+/*
+h1 {
+  position: relative;
+  color: #ffffff;  
+  font-size: 14rem;
+  line-height: 0.9;
+  text-align: center;
+}
+*/

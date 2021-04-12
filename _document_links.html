@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+<style>
+/* 
+/* 
+		<!-- When you set mybox-sizing: border-mybox; on an element, the padding and border of that element no longer increase its width (* selector = all elements) -->
+	*/
+* { box-sizing: border-box;} 
+	body { 
+        background-image: url('../../../images/whittile.jpg'); 
+		height: 100%;		/* <!-- use the full length of the window --> */
+        margin: 10px;		/* <!-- move the body 10pixels from the window on all four sides -->
+        font-size: 100%;  	/* <!-- Use of percentage values, or values in ems, leads to more robust and cascadable style sheets --> */
+    }
+	
+	/* <!--the mycontainer is the entire body of the page --> */
+	/* <!--the mybox is where the used for the section title and holds mybox --> */
+	/* <!--the mytab is where the btns reside #3399ff;--> */
+	
+    .mycontainer, .mybox {
+        background-image: url('http://www.vfw10125.org/uploads/documents/images/whittile.jpg');
+		background-color: lightgray;
+        border: 5px solid blue;
+        border-style: outset;
+		border-radius: 10px;
+		box-shadow: 5px 5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 5px 15px;	
+		padding: 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 100%;
+		font-weight: 900;
+        
+    }
+    
+    .mycontainer {
+		width: 95%;
+	}
+	
+	.mybox {
+		background: lightskyblue;
+		width: 100%;
+	}
+	
+ 
+	
+    /* <!-- mytab sections contains the link buttons --> */
+    .mytab {
+        border: 4px inset white;
+		border-radius: 20px;
+        background-color: blue;
+		margin: 5px 10px;
+		padding: 5px 10px;
+        width: 100%;				/* <!-- mytab width covers the entire width of mybox less margin --> */
+
+    }
+	
+	h3 { color: white; }
+	
+	/* <!-- set a base for document paragraphs --> */
+    .mytab p {
+		width:15%;					/* <!-- each p element will set its own sizing, depending on window width --> */
+		display: inline-block;		/* <!-- inline-block allows a width and height on the element. Also, the top and bottom margins/paddings are respected--> */ 
+		background-color: lightskyblue;
+		border: 3px outset black;	/* <!-- give the "css buttons" a 3d appearance --> */
+        border-radius: 12px;		/* <!-- all corners have the same rounded appearance --> */
+        box-shadow: 3px 3px;		/* <!-- assist the border with the 3d appearance --> */
+		margin: 10px 5px 15px 0;	/* <!-- top right bottom left --> */
+	}
+	/* <!-- the paragraphs within the section determine the width of the .btn class --> */
+	#section p {
+		width: 24%;
+	}
+	
+	#district p {
+		width: 24%;
+	}
+	
+	#pubs p, #vethealth p, #organizations p,  #other p {
+		width: 32%;
+	}
+	
+	/* <!-- both the .btn class and the anchors will fill the paragraphs --> */
+	a {
+		width: 100%;
+	}
+	
+
+	/* <!-- Style the basic .btn class; These CSS features make the class act like a button --> */
+	.btn {
+        display: inline-block;
+		border: 2px outset navy;
+		border-radius: 10px;
+		overflow: hidden;
+        cursor: pointer;
+        padding: 10px;
+        transition: 0.3s;
+        font-size: 1.1rem;
+		font-weight: 600;
+        width: 100%;
+		height: 100%;
+		color: black;
+		vertical-align: middle;
+		text-align: center;
+}
+
+	
+	
+	/* **********<!-- pseudo classes for the links, btns -->********** */
+	/* <!-- Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.
+	--> */
+	a:link {
+		text-decoration: none;
+	}
+	a:visited {
+		color: black;
+	}
+    a:hover  {
+        background-color: navy;
+        color: white;
+	}   
+	/* <!-- here for completeness - when does the active pseudo class show?? --> */
+	a:active {
+		border-top-color: #1b435e;
+		background: #1b435e;
+	}
+
+	/* ********** <!-- @media rule: Media queries can be used to check many things, such as: width and height of the viewport.--> ********** */
+    /* <!-- setting width for smaller screens using Media queries --> */
+	 
+	@media (max-width: 1400px){
+		.mybox {
+			width: 95%;
+			font-size: .9rem;
+			font-weight: 800;
+		}		
+		
+		.btn {
+			font-size: .9rem;
+			font-weight: 800;
+		}
+
+	}	
+	
+	@media (max-width: 1210px){
+		.mybox {
+			width: 95%;
+			font-size: .8rem;
+			font-weight: 700;
+		}		
+		
+		.btn {
+			font-size: .8rem;
+			font-weight: 700;
+		}
+
+	}	
+	
+	@media (max-width: 1115px){
+		.mybox {
+			width: 95%;
+			font-size: .7rem;
+			font-weight: 600;
+		}		
+		
+		.btn {
+			font-size: .7rem;
+			font-weight: 600;
+		}
+
+	}	
+	
+
+	@media (max-width: 1050px){
+		mycontainer {
+			background-image: url('http://www.vfw10125.org/uploads/documents/images/snow.jpg');
+			background-color: lightgray;
+		}			
+        
+		.mybox { 
+			width: 95%;
+			font-size: .9rem;
+			font-weight: 800;
+		}
+
+		.btn {
+			font-size: .9rem;
+			font-weight: 800;
+		}
+
+		
+
+		#section p, #district p {
+			width: 24%;
+		}
+	
+		#pubs p, 
+		#vethealth p, 
+		#organizations p,  
+		#other p {
+			width: 48%;
+		}
+
+	}
+	
+	@media (max-width: 775px){
+			#section p, #district p {
+			width: 48%;
+		}
+
+	
+	
+	}
+	
+	
+	@media (max-width: 735px){
+        
+		
+		
+		.mybox { 
+			width: 95%;
+			font-size: .8rem;
+			font-weight: 700;
+		}
+        .mytab btn {
+			font-size: .8rem;
+			font-weight: 700;
+		}
+
+		#section p, #district p {
+			width: 48%;
+		}
+		
+	}
+		
+	@media (max-width: 680px){
+        .mybox { 
+			width: 95%;
+			font-size: .7rem;
+			font-weight: 300;
+		}
+		 .mytab p {
+			width:30%;
+		}
+        .mytab btn {
+			font-size: .7rem;
+		} 
+	}
+	
+	@media (max-width: 525px){
+
+        .mybox { 
+			width: 95%;
+			font-size: .8rem;
+			font-weight: 700;
+		}
+		.mytab p {
+			width:30%;
+		}
+        .mytab btn {
+			font-size: .8rem;
+			font-weight: 700;
+		} 
+
+		#section p,
+		#organizations p,  
+		#district p, 
+		#pubs p, 
+		#vethealth p, 
+		#other p {
+			width: 98%;
+		}
+	}
+-->
+</style> */
+</head>
+<body>
+	
+
+
+<div class="mycontainer" id="mytop">  
+	<!--
+	intentionally left blank for vertical spacing
+	-->
+	
+	<section> 
+		<div class="mybox" id="section">
+			<h2><a href="/uploads/documents/Minutes/Minutes20200915.pdf" title="Minutes20200915" name="Minutes20200915">Section Selection</h2>
+			<div class="mytab">
+				<p><a title="July 2017 thru November 2018" class="btn" href="#minutes" target="_blank">Minutes</a></p>        
+				<p><a title="Budget, Budget Status, Quarterly Audit Reports" class="btn" href="#qm" target="_blank">Quartermaster</a></p>        
+				<p><a title="Post By-Laws, Articles of Incorporation, Member Roster, Retention Strategy" class="btn" href="#docs" target="_blank">Post Documents</a></p>  			
+  
+				<p><a title="Membership Statistics as of 11/30/2018" class="btn" href="/uploads/documents/membersonly/memstats.html" target="_blank">Membership Stats</a></p></div></div>  
+  	 
+		<div class="mybox" id="minutes">
+			<h2>Minutes</h2>   
+ 
+			<div class="mytab">
+				<h3>2019</h3>  
+        
+				<p><a title="January 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2019/minutes_20190115.pdf" target="_blank">January</a></p>        
+				<p><a title="February 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2019/minutes_20190219.pdf" target="_blank">February</a></p>        
+				<p><a title="March 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2019/minutes_20190319.pdf" target="_blank">March</a></p>        
+				<p><a title="April 2019" class="btn" href="https://vfw10125.org/uploads/documents/minutes_20190416(R).pdf" target="_blank">April</a></p>        
+				<p><a title="May 2019" class="btn" href="https://vfw10125.org/uploads/documents/minutes_20190521.pdf" target="_blank">May</a></p>        
+				<p><a title="June 2019" class="btn" href="https://vfw10125.org/uploads/documents/minutes_20190618.pdf" target="_blank">June</a></p>         
+				<p><a title="July 2019" class="btn" href="https://vfw10125.org/uploads/documents/Minutes/minutes_20190716.pdf" target="_blank">July</a></p>        
+				<p><a title="August 2019" class="btn" href="https://vfw10125.org/uploads/documents/Minutes/minutes_20190820.pdf" target="_blank">August</a></p>        
+				<p><a title="September 2019" class="btn" href="https://vfw10125.org/uploads/documents/Minutes/Minutes20190917.pdf" target="_blank">September</a></p>        
+				<p><a title="October 2019" class="btn" href="https://vfw10125.org/uploads/documents/Minutes/Minutes20191015.pdf" target="_blank">October</a></p>        
+				<p><a title="November 2019" class="btn" href="https://vfw10125.org/uploads/documents/Minutes/Minutes20191119.pdf" target="_blank">November</a></p>        
+				<p><a title="December 2019" class="btn" href="https://vfw10125.org/uploads/documents/Minutes/Minutes20191210.pdf" target="_blank">December</a></p>     
+       </div>   
+   
+			<div class="mytab">
+				<h3>2020</h3>  
+        
+				<p><a title="January 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes_20200121.pdf" target="_blank">January</a></p>        
+				<p><a title="February 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/minutes_20200218.pdf" target="_blank">February</a></p>        
+				<p><a title="March 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/minutes_20200317.pdf" target="_blank">March</a></p>        
+				<p><a title="April 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/minutes04212020.pdf" target="_blank">April</a></p>        
+				<p><a title="May 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes20200519.pdf" target="_blank">May</a></p>              
+				<p><a title="June 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes20200621.pdf" target="_blank">June</a></p> 
+				<p><a title="July 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes20200721.pdf" target="_blank">July</a></p> 
+				<p><a title="August 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes20200819.pdf" target="_blank">August</a></p>
+				<p><a title="September 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes20200915.pdf" target="_blank">September</a></p>            
+				<p><a title="October 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/20201020Minutes.pdf" target="_blank">October</a></p>               
+				<p><a title="November 2020" class="btn" href="https://www.vfw10125.org/uploads/documents/Minutes/Minutes20201117.pdf" target="_blank">November</a></p> 
+				<!--
+				<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20180619.pdf" target="_blank" title="June 2018">
+					June</a></p>         
+			<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20180717.pdf" target="_blank" title="July 2018">
+					July</a></p>        
+			<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20180821.pdf" target="_blank" title="August 2018">
+					August</a></p>        
+			<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20180918.pdf" target="_blank" title="September 2018">
+					September</a></p>        
+			<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20181016.pdf" target="_blank" title="October 2018">
+					October</a></p>        
+			<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20181120.pdf" target="_blank" title="November 2018">
+					November</a></p>        
+			<p><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/minutes/2018/minutes_20181218.pdf" target="_blank" title="December 2018">
+					December</a></p>
+				-->
+				       </div>   
+	   <a style="border: currentColor; border-image: none; width: 110px;" href="#mytop">Back to top</a></div> 
+	 
+		<div class="mybox" id="qm">
+			<h2>Quartermaster Reports</h2>
+			<div class="mytab">
+				<h3>2019 Monthly Budget Reports</h3>  
+				<p><a title="January 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_012019.pdf" target="_blank">January</a></p>
+				<p><a title="February 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_022019.pdf" target="_blank">February</a></p>
+				<p><a title="March 2019" class="btn" href="https://vfw10125.org/uploads/documents/SiteDocs/OOPS.pdf" target="_blank">March</a></p>
+				<p><a title="April 2019" class="btn" href="https://vfw10125.org/uploads/documents/SiteDocs/OOPS.pdf" target="_blank">April</a></p>
+				<p><a title="May 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_052019.pdf" target="_blank">May</a></p>
+				<p><a title="June 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/Oops.pdf" target="_blank">June</a></p>  
+				<p><a title="July 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_072019.pdf" target="_blank">July</a></p>
+				<p><a title="August 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_082019.pdf" target="_blank">August</a></p>
+				<p><a title="September 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_092019.pdf" target="_blank">September</a></p>
+				<p><a title="October 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_102019.pdf" target="_blank">October</a></p>
+				<p><a title="November 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_112019.pdf" target="_blank">November</a></p>
+				<p><a title="December 2019" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_122019.pdf" target="_blank">December</a></p>     
+			</div>
+			<div class="mytab">
+				<h3>2020 Monthly Budget Reports</h3>  
+				<p><a title="January 2020" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_012020.pdf" target="_blank">January</a></p>
+				<p><a title="February 2020" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_022020.pdf" target="_blank">February</a></p>
+				<p><a title="March 2020" class="btn" href="http://www.vfw10125.org/uploads/documents/QMReports/QMRpt_032020.pdf" target="_blank">March</a></p>
+				<p><a title="April 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_042020.pdf" target="_blank">April</a></p>              
+				<p><a title="May 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_052020.pdf" target="_blank">May</a></p>              
+				<p><a title="June 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_062020.pdf" target="_blank">June</a></p>              
+				<p><a title="July 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_072020.pdf" target="_blank">July</a></p>              
+				<p><a title="August 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_082020.pdf" target="_blank">August</a></p>              
+				<p><a title="September 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_092020.pdf" target="_blank">September</a></p>          
+				<p><a title="October 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_102020.pdf" target="_blank">October</a></p>          
+				<p><a title="November 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QMRpt_112020.pdf" target="_blank">November</a></p>
+			</div>       
+<!--
+<div class="mytab">
+			<h3>2018-2019 Proposed Budget and Budget Status</h3>  
+        
+			<p style="width: 32%;"><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/qm_budget/2018-19ProposedBudget.pdf" target="_blank" title="Proposed Budget 2018">
+					Proposed Budget</a></p>        
+			<p style="width: 32%;"><a class='btn' href="http://www.vfw10125.org/uploads/documents/MembersOnly/qm_budget/11202018_RevisedBudgetReport.pdf" target="_blank" title="Budget Revision">
+					Budget Status Nov 2018</a></p>
+			<p style="width: 32%;"><a class='btn' href="https://vfw10125.org/uploads/documents/BudgetStatus01152019.pdf" target="_blank" title="Budget Status">
+					Budget Status Jan 2019</a></p></div>
+-->
+   
+<div class="mytab">
+	<h3>Quarterly Audit Reports</h3>  
+			   
+	<p><a title="4th Qtr 2019" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QA12312019.pdf" target="_blank">December 2019</a></p>
+	<p><a title="1st Qtr 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QARpt_033120.pdf" target="_blank">March 2020</a></p>                
+	<p><a title="2nd Qtr 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QARpt_063020.pdf" target="_blank">June 2020</a></p>                
+	<p><a title="3rd Qtr 2020" class="btn" href="https://vfw10125.org/uploads/documents/QMReports/QARpt_093020.pdf" target="_blank">September 2020</a></p> 
+              
+	<!--
+	<div class="mytab">
+          <p><a title="4th Qtr 2017" class="btn" href="https://vfw10125.org/uploads/documents/SiteDocs/OOPS.pdf" target="_blank">December 2018</a></p>        
+				<p><a title="1st Qtr 2018" class="btn" href="https://vfw10125.org/uploads/documents/SiteDocs/OOPS.pdf" target="_blank">March 2019</a></p>        
+				<p><a title="2nd Qtr 2019" class="btn" href="https://vfw10125.org/uploads/documents/SiteDocs/OOPS.pdf" target="_blank">June 2019</a></p>        
+				<p><a title="3rd Qtr 2019" class="btn" href="https://vfw10125.org/uploads/documents/SiteDocs/OOPS.pdf" target="_blank">September 2019</a></p>
+	-->
+	              
+          </div><a style="border: currentColor; border-image: none; width: 110px;" href="#mytop">Back to top</a>
+<div class="mybox" id="docs">
+	<h2>Post Documents</h2>
+	<div class="mytab"><br />
+		
+		<p><a title="Post By Laws" class="btn" href="http://www.vfw10125.org/uploads/documents/MembersOnly/ByLaws.pdf" target="_blank">Post By-Laws</a></p>
+		<p style="width: 25%;"><a title="Post Articles of Incorporation" class="btn" href="http://www.vfw10125.org/uploads/documents/MembersOnly/AI2017.pdf" target="_blank">Articles of Incorporation</a></p>
+		<p style="width: 25%;"><a title="Roster Pending" class="btn" href="http://www.vfw10125.org/uploads/documents/Oops.pdf" target="_blank">Member Roster (pending)</a></p>
+		<p style="width: 25%;"><a title="Retention Strategy" class="btn" href="http://www.vfw10125.org/uploads/documents/MembersOnly/RetentionStrategy.pdf" target="_blank">Retention Strategy</a></p>       
+        </div><a style="border: currentColor; border-image: none; width: 110px;" href="#mytop">Back to top</a></div>
+	</body>
+</html>

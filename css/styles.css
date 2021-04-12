@@ -1,0 +1,138 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-image: url("../images/opaque.png");
+}
+
+header {
+    border: 12px solid red;
+    grid-column: 1 / 9;
+    grid-row: 1;
+    text-align: center;
+    padding: 0;
+} 
+
+.hdr-text {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.subhead {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    padding: 0 3vw;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav {
+    border: 5px solid green;
+    background-color: olivedrab;
+    height: 12vw;
+}
+
+
+.sitenav { 
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    background-color: olivedrab;
+}
+
+
+.navbtn {
+    display: inline-block;
+    background-color: red;
+    border: 2px outset navy;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 1.5vw 0;
+    margin: 1vw;
+    transition: 0.5s;
+    font-size: 1.3vw;
+    font-weight: 500;
+    width: 9vw;
+    height: 7vw;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+
+nav a:link { 
+    border: 2px outset navy;
+    background-color: red;
+    color: white;
+}
+
+nav a:visited { 
+    border: 2px outset navy;
+    background-color: red;
+    color: white;
+}
+nav a:hover { background-color: blue; color: yellow; border: 8px outset white;}
+
+/* split the middle section into9 2 sides */
+main {
+    border: 10px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family:'Times New Roman', Times, serif; 
+}
+
+/* left half images */
+aside {
+    display: flex;
+    border: 2px solid blue;
+    grid-column-start: 1;
+    grid-row-start:1;
+    flex-direction: column;
+} 
+
+/* set spacing between image and text */
+.imgright { margin-left: 2vw; }
+
+/* default image width */
+img {width: 30vw;}
+
+/* right half text */
+.content {
+    grid-column-start: 2;
+}
+
+footer img { width: 100vw; }
+
+h2 {
+    display: inline-block;
+    font-size: 2.5vw;
+    text-align: left;
+    margin: 2vw;
+}
+
+p {
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 3vw;
+}
+
+/* handling text for the entire window */
+.small, .s-med { font-size: 2.2vw; line-height: 1; }
+.s-med { font-weight: 500;  } 
+.med {  font-size: 3vw; line-height: 1; }
+.large, .s-large {  font-size: 4vw; line-height: 1.2; }
+.s-large { font-weight: 800;}
+.title {
+    display: inline-block;
+    font-size: 3.5vw;
+    text-align: center;
+    text-shadow: .3vw .3vw grey;
+    font-weight: 700;
+    margin: 5vw 0;
+}
+
+

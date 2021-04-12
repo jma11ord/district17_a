@@ -1,0 +1,38 @@
+ * { 
+    font-size: 48px;
+} 
+.container { grid-template-rows: 13vw; }
+
+nav { 
+    grid-row: 1;
+    grid-column: 2 / -1;
+}
+
+main {
+    grid-row: 2;
+    grid-column: 1 / 12;
+}
+/* 
+.content {
+    grid-column-start: 2;
+}
+ */
+
+section { 
+    border: 2px solid green;
+    grid-column: 2 / 12;  
+}
+
+
+h2 {
+    display: inline-block;
+    font-size: 2.5vw;
+    text-align: left;
+    margin: 2vw;
+    
+}
+p {
+    font-size: 2vw;
+    text-align: left;
+    margin-left: 3vw;
+}

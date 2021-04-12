@@ -1,0 +1,71 @@
+main { 
+    grid-column: 1/12;
+    grid-row: 2;
+    /* height: 5vw; */
+    text-align: start;
+    font-size: 1.5vw;
+}
+
+
+
+h2 {
+text-align: center;
+}
+
+h3 {
+text-align: left;
+}
+
+.btn {
+border: 2px outset navy;
+background-color: #C5F2F2FF;
+border-radius: 20px;
+overflow: hidden;
+cursor: pointer;
+padding: 2px;
+transition: 0.3s;
+font-size: 1.5vw;
+font-weight: 600;
+vertical-align: middle;
+text-align: center;
+
+text-decoration: none;
+}
+a:link { 
+border: 2px outset navy;
+background-color: #C5F2F2FF;
+color: blue;
+}
+
+a:visited { 
+border: 2px outset navy;
+background-color: #C5F2F2FF;
+color: blue;
+}
+
+a:hover { background-color: blue; color: white; border: 2px outset cyan;}
+
+
+
+.mytab {
+background-color: lightskyblue;
+padding: 10px;
+border: 3px inset navy;
+border-radius: 5px;
+display: grid;
+grid-template-columns: 3fr 3fr 3fr 3fr;
+grid-gap: 5px;
+}
+/* 
+.budget {
+grid-template-columns: 4fr 4fr 4fr}
+ */
+.totop {
+border: 1px solid red; 
+border-radius: 15px;
+width: 110px; 
+margin: 3px; 
+text-align: center;
+padding: 4px; 
+background-color: rgba(224, 224, 224, .5);
+}
