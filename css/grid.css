@@ -97,9 +97,9 @@ h3 { font-size: 1rem; }
     padding: 20px 1px 5px;
     margin: 4px;
     transition: 0.5s;
-    font-size: 1.1rem;
-    font-weight: 500;
-    width: 100px;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 80px;
     height: 70px;
     color: white;
     vertical-align: middle;
@@ -226,7 +226,7 @@ p {
 	.imgright {width: 300px; }
 	/* .navhdr { margin-left: 100px; grid-area: 5 / 1 / 6 / 12;} */
 
-	.navbtn { width: 130px;}
+	.navbtn { width: 90px;}
 	aside img { width: 300px; }
 	p { 
 		font-size: 2rem;
@@ -262,7 +262,7 @@ p {
 
 	/* .sitenav { grid-area: 6 / 4 / 7 / 10; } */
 	.navbtn {
-		width: 180px;
+		width: 90px;
 	}
 
 	main {	
